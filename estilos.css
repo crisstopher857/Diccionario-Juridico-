@@ -106,3 +106,48 @@ body {
 .card p {
     margin-bottom: 0;
 }
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-title h1,
+.header-title p {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.header-image {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.header {
+    padding: 2.5rem 2rem;
+}
+
+.header-title {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Ajustes para teléfonos */
+@media (max-width: 600px) {
+    .header-top {
+        grid-template-columns: 54px minmax(0, 1fr) 54px;
+        gap: 0.4rem;
+    }
+
+    .header-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .header-title h1 {
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
+    }
+}
